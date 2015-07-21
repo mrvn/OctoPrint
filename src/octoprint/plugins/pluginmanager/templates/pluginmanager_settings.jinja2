@@ -28,20 +28,20 @@
             </div>
         </td>
         <td class="settings_plugin_plugin_manager_plugins_actions">
-            <a href="#" data-bind="css: $root.toggleButtonCss($data), attr: {title: $root.toggleButtonTitle($data)}, enable: $root.enableToggle($data), click: function() { $root.togglePlugin($data) }"></a>&nbsp;|&nbsp;<a href="#" class="icon-trash" title="{{ _('Uninstall Plugin') }}" data-bind="css: {disabled: !$root.enableUninstall($data)}, enable: $root.enableUninstall($data), click: function() { $root.uninstallPlugin($data) }"></a>
+            <a href="javascript:void(0);" data-bind="css: $root.toggleButtonCss($data), attr: {title: $root.toggleButtonTitle($data)}, enable: $root.enableToggle($data), click: function() { $root.togglePlugin($data) }"></a>&nbsp;|&nbsp;<a href="javascript:void(0);" class="icon-trash" title="{{ _('Uninstall Plugin') }}" data-bind="css: {disabled: !$root.enableUninstall($data)}, enable: $root.enableUninstall($data), click: function() { $root.uninstallPlugin($data) }"></a>
         </td>
     </tr>
     </tbody>
 </table>
 <div class="pagination pagination-mini pagination-centered">
     <ul>
-        <li data-bind="css: {disabled: plugins.currentPage() === 0}"><a href="#" data-bind="click: plugins.prevPage">«</a></li>
+        <li data-bind="css: {disabled: plugins.currentPage() === 0}"><a href="javascript:void(0);" data-bind="click: plugins.prevPage">«</a></li>
     </ul>
     <ul data-bind="foreach: plugins.pages">
-        <li data-bind="css: { active: $data.number === $root.plugins.currentPage(), disabled: $data.number === -1 }"><a href="#" data-bind="text: $data.text, click: function() { $root.plugins.changePage($data.number); }"></a></li>
+        <li data-bind="css: { active: $data.number === $root.plugins.currentPage(), disabled: $data.number === -1 }"><a href="javascript:void(0);" data-bind="text: $data.text, click: function() { $root.plugins.changePage($data.number); }"></a></li>
     </ul>
     <ul>
-        <li data-bind="css: {disabled: plugins.currentPage() === plugins.lastPage()}"><a href="#" data-bind="click: plugins.nextPage">»</a></li>
+        <li data-bind="css: {disabled: plugins.currentPage() === plugins.lastPage()}"><a href="javascript:void(0);" data-bind="click: plugins.nextPage">»</a></li>
     </ul>
 </div>
 
@@ -49,7 +49,7 @@
 
 <div id="settings_plugin_pluginmanager_workingdialog" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3 data-bind="text: workingTitle"></h3>
     </div>
     <div class="modal-body">
@@ -62,23 +62,23 @@
 
 <div id="settings_plugin_pluginmanager_repositorydialog" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3>{{ _('Install new Plugins...') }}</h3>
     </div>
     <div class="modal-body">
         {{ pluginmanager_printing() }}
         <h4 style="position: relative">
             {{ _('... from the <a href="%(url)s" target="_blank">Plugin Repository</a>', url='http://plugins.octoprint.org') }}
-            <a class="dropdown-toggle pull-right" data-toggle="dropdown" href="#">
+            <a class="dropdown-toggle pull-right" data-toggle="dropdown" href="javascript:void(0);">
                 <span class="icon-wrench"></span>
                 <ul class="dropdown-menu pull-right">
-                    <li><a href="#" data-bind="click: function() { repositoryplugins.changeSorting('title'); }"><i class="icon-ok" data-bind="style: {visibility: repositoryplugins.currentSorting() == 'title' ? 'visible' : 'hidden'}"></i> {{ _('Sort by title') }} ({{ _('ascending') }})</a></li>
-                    <li><a href="#" data-bind="click: function() { repositoryplugins.changeSorting('published'); }"><i class="icon-ok" data-bind="style: {visibility: repositoryplugins.currentSorting() == 'published' ? 'visible' : 'hidden'}"></i> {{ _('Sort by publication date') }} ({{ _('descending') }})</a></li>
+                    <li><a href="javascript:void(0);" data-bind="click: function() { repositoryplugins.changeSorting('title'); }"><i class="icon-ok" data-bind="style: {visibility: repositoryplugins.currentSorting() == 'title' ? 'visible' : 'hidden'}"></i> {{ _('Sort by title') }} ({{ _('ascending') }})</a></li>
+                    <li><a href="javascript:void(0);" data-bind="click: function() { repositoryplugins.changeSorting('published'); }"><i class="icon-ok" data-bind="style: {visibility: repositoryplugins.currentSorting() == 'published' ? 'visible' : 'hidden'}"></i> {{ _('Sort by publication date') }} ({{ _('descending') }})</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-bind="click: function() { repositoryplugins.toggleFilter('filter_installed'); }"><i class="icon-ok" data-bind="style: {visibility: _.contains(repositoryplugins.currentFilters(), 'filter_installed') ? 'visible' : 'hidden'}"></i> {{ _('Only show uninstalled plugins') }}</a></li>
-                    <li><a href="#" data-bind="click: function() { repositoryplugins.toggleFilter('filter_incompatible'); }"><i class="icon-ok" data-bind="style: {visibility: _.contains(repositoryplugins.currentFilters(), 'filter_incompatible') ? 'visible' : 'hidden'}"></i> {{ _('Only show compatible plugins') }}</a></li>
+                    <li><a href="javascript:void(0);" data-bind="click: function() { repositoryplugins.toggleFilter('filter_installed'); }"><i class="icon-ok" data-bind="style: {visibility: _.contains(repositoryplugins.currentFilters(), 'filter_installed') ? 'visible' : 'hidden'}"></i> {{ _('Only show uninstalled plugins') }}</a></li>
+                    <li><a href="javascript:void(0);" data-bind="click: function() { repositoryplugins.toggleFilter('filter_incompatible'); }"><i class="icon-ok" data-bind="style: {visibility: _.contains(repositoryplugins.currentFilters(), 'filter_incompatible') ? 'visible' : 'hidden'}"></i> {{ _('Only show compatible plugins') }}</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" data-bind="click: function() { refreshRepository(); }"><i class="icon-refresh"></i> {{ _('Refresh list from repository') }}</a></li>
+                    <li><a href="javascript:void(0);" data-bind="click: function() { refreshRepository(); }"><i class="icon-refresh"></i> {{ _('Refresh list from repository') }}</a></li>
                 </ul>
             </a>
         </h4>

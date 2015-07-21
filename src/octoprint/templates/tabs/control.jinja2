@@ -4,7 +4,7 @@
             <img id="webcam_image" data-bind="css: { flipH: settings.webcam_flipH(), flipV: settings.webcam_flipV() }">
         </div>
         <div class="keycontrol_overlay" data-bind="visible: showKeycontrols">
-            <div class="keycontrol_overlay_heading">{{ _("Keyboard controls active") }} <a href="#" data-bind="click: toggleKeycontrolHelp"><i data-bind="css: { 'icon-chevron-down': !keycontrolHelpActive(), 'icon-chevron-up': keycontrolHelpActive() }"></i></a></div>
+            <div class="keycontrol_overlay_heading">{{ _("Keyboard controls active") }} <a href="javascript:void(0);" data-bind="click: toggleKeycontrolHelp"><i data-bind="css: { 'icon-chevron-down': !keycontrolHelpActive(), 'icon-chevron-up': keycontrolHelpActive() }"></i></a></div>
             <div data-bind="visible: keycontrolHelpActive">
                 <div class="keycontrol_overlay_column">
                     <kbd>&rarr;</kbd> / <kbd>&larr;</kbd>: {{ _("X Axis") }} +/-<br>
@@ -78,7 +78,7 @@
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" data-bind="foreach: tools">
-                <li><a href="#" data-bind="click: $root.sendSelectToolCommand, text: name(), enable: $root.isOperational() && !$root.isPrinting() && !$root.isPaused() && $root.loginState.isUser()"></a></li>
+                <li><a href="javascript:void(0);" data-bind="click: $root.sendSelectToolCommand, text: name(), enable: $root.isOperational() && !$root.isPrinting() && !$root.isPaused() && $root.loginState.isUser()"></a></li>
             </ul>
         </div>
         <div class="input-append control-box">

@@ -23,17 +23,17 @@
 <div class="pagination pagination-mini pagination-centered">
     <ul>
         <li data-bind="css: {disabled: versions.currentPage() === 0}">
-            <a href="#" data-bind="click: versions.prevPage">«</a>
+            <a href="javascript:void(0);" data-bind="click: versions.prevPage">«</a>
         </li>
     </ul>
     <ul data-bind="foreach: versions.pages">
         <li data-bind="css: { active: $data.number === $root.versions.currentPage(), disabled: $data.number === -1 }">
-            <a href="#" data-bind="text: $data.text, click: function() { $root.versions.changePage($data.number); }"></a>
+            <a href="javascript:void(0);" data-bind="text: $data.text, click: function() { $root.versions.changePage($data.number); }"></a>
         </li>
     </ul>
     <ul>
         <li data-bind="css: {disabled: versions.currentPage() === versions.lastPage()}">
-            <a href="#" data-bind="click: versions.nextPage">»</a>
+            <a href="javascript:void(0);" data-bind="click: versions.nextPage">»</a>
         </li>
     </ul>
 </div>
@@ -41,7 +41,7 @@
 <button class="btn btn-primary btn-block" data-bind="click: function() { $root.performCheck(true, false, true); }">{{ _('Check for update now') }}</button>
 
 <div>
-    <div><small><a href="#" class="muted" onclick="$(this).children().toggleClass('icon-caret-right icon-caret-down').parent().parent().parent().next().slideToggle('fast')"><i class="icon-caret-right"></i> {{ _('Advanced options') }}</a></small></div>
+    <div><small><a href="javascript:void(0);" class="muted" onclick="$(this).children().toggleClass('icon-caret-right icon-caret-down').parent().parent().parent().next().slideToggle('fast')"><i class="icon-caret-right"></i> {{ _('Advanced options') }}</a></small></div>
     <div class="hide">
         <button class="btn btn-block" data-bind="click: function() { $root.performCheck(true, true, true); }">{{ _('Force check for update (overrides cache used for update checks)') }}</button>
         <button class="btn btn-block btn-danger" data-bind="click: function() { $root.update(true); }">{{ _('Force update now (even if no new versions are available)') }}</button>
@@ -50,7 +50,7 @@
 
 <div id="settings_plugin_softwareupdate_configurationdialog" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3>{{ _('Plugin Configuration') }}</h3>
     </div>
     <div class="modal-body">
@@ -86,7 +86,7 @@
 
 <div id="settings_plugin_softwareupdate_workingdialog" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3 data-bind="text: workingTitle"></h3>
     </div>
     <div class="modal-body">

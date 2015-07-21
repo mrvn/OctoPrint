@@ -13,20 +13,20 @@
         <td class="settings_users_active"><i data-bind="css: { 'icon-check': active, 'icon-check-empty': !active }"></i></td>
         <td class="settings_users_admin"><i data-bind="css: { 'icon-check': admin, 'icon-check-empty': !admin }"></i></td>
         <td class="settings_users_actions">
-            <a href="#" class="icon-pencil" title="{{ _('Update User') }}" data-bind="click: function() { $root.users.showEditUserDialog($data); }"></a>&nbsp;|&nbsp;<a href="#" class="icon-key" title="{{ _('Change password') }}" data-bind="click: function() { $root.users.showChangePasswordDialog($data); }"></a>&nbsp;|&nbsp;<a href="#" class="icon-trash" title="{{ _('Delete user') }}" data-bind="click: function() { $root.users.removeUser($data); }"></a>
+            <a href="javascript:void(0);" class="icon-pencil" title="{{ _('Update User') }}" data-bind="click: function() { $root.users.showEditUserDialog($data); }"></a>&nbsp;|&nbsp;<a href="javascript:void(0);" class="icon-key" title="{{ _('Change password') }}" data-bind="click: function() { $root.users.showChangePasswordDialog($data); }"></a>&nbsp;|&nbsp;<a href="javascript:void(0);" class="icon-trash" title="{{ _('Delete user') }}" data-bind="click: function() { $root.users.removeUser($data); }"></a>
         </td>
     </tr>
     </tbody>
 </table>
 <div class="pagination pagination-mini pagination-centered">
     <ul>
-        <li data-bind="css: {disabled: users.listHelper.currentPage() === 0}"><a href="#" data-bind="click: users.listHelper.prevPage">«</a></li>
+        <li data-bind="css: {disabled: users.listHelper.currentPage() === 0}"><a href="javascript:void(0);" data-bind="click: users.listHelper.prevPage">«</a></li>
     </ul>
     <ul data-bind="foreach: users.listHelper.pages">
-        <li data-bind="css: { active: $data.number === $root.users.listHelper.currentPage(), disabled: $data.number === -1 }"><a href="#" data-bind="text: $data.text, click: function() { $root.users.listHelper.changePage($data.number); }"></a></li>
+        <li data-bind="css: { active: $data.number === $root.users.listHelper.currentPage(), disabled: $data.number === -1 }"><a href="javascript:void(0);" data-bind="text: $data.text, click: function() { $root.users.listHelper.changePage($data.number); }"></a></li>
     </ul>
     <ul>
-        <li data-bind="css: {disabled: users.listHelper.currentPage() === users.listHelper.lastPage()}"><a href="#" data-bind="click: users.listHelper.nextPage">»</a></li>
+        <li data-bind="css: {disabled: users.listHelper.currentPage() === users.listHelper.lastPage()}"><a href="javascript:void(0);" data-bind="click: users.listHelper.nextPage">»</a></li>
     </ul>
 </div>
 
@@ -36,7 +36,7 @@
 
 <div id="settings-usersDialogAddUser" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3>{{ _('Add user') }}</h3>
     </div>
     <div class="modal-body">
@@ -84,7 +84,7 @@
 
 <div id="settings-usersDialogEditUser" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3>{{ _('Edit user "%(user)s"', user = '<span data-bind="text: $root.users.editorUsername"></span>') }}</h3>
     </div>
     <div class="modal-body">
@@ -113,7 +113,7 @@
 
 <div id="settings-usersDialogChangePassword" class="modal hide fade">
     <div class="modal-header">
-        <a href="#" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+        <a href="javascript:void(0);" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
         <h3>{{ _('Change password for user "%(user)s"', user='<span data-bind="text: $root.users.editorUsername"></span>') }}</h3>
     </div>
     <div class="modal-body">
